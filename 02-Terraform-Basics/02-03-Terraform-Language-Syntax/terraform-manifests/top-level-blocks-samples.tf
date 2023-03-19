@@ -27,7 +27,7 @@ provider "aws" {
 #####################################################################
 # Block-3: Resource Block
 resource "aws_instance" "ec2demo" {
-  ami           = "ami-04d29b6f966df1537" # Amazon Linux
+  ami           = "ami-0457d23bb4e5c6fd2" # Amazon Linux
   instance_type = var.instance_type
 }
 #####################################################################
@@ -51,14 +51,14 @@ locals {
 }
 #####################################################################
 # Block-7: Data sources Block
-# Get latest AMI ID for Amazon Linux2 OS
+# Get latest AMI ID for Amazon Linux2023 OS
 data "aws_ami" "amzlinux" {
   most_recent      = true
   owners           = ["amazon"]
 
   filter {
     name   = "name"
-    values = ["amzn2-ami-hvm-*"]
+    values = ["al2023-ami-*"]
   }
 
   filter {
