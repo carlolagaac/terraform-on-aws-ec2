@@ -1,11 +1,12 @@
 # Create VPC Terraform Module
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "2.78.0"  
+  version = "~>3"  
   # version = "~> 2.78"
 
   # VPC Basic Details
   name = "vpc-dev"
+  enable_ipv6 = true
   cidr = "10.0.0.0/16"   
   azs                 = ["ap-southeast-1a", "ap-southeast-1b"]
   private_subnets     = ["10.0.1.0/24", "10.0.2.0/24"]
@@ -40,8 +41,9 @@ module "vpc" {
   }
 
   tags = {
-    Owner = "kalyan"
+    Owner = "carlo"
     Environment = "dev"
+    Project = "vpc-dev"
   }
 
   vpc_tags = {
