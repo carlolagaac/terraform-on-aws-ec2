@@ -90,3 +90,7 @@ cat $HOME/.aws/credentials
 ## Step-07: LinuxOS: Terraform & AWS CLI Install
 - [Download Terraform](https://www.terraform.io/downloads.html)
 - [Linux OS - Terraform Install](https://learn.hashicorp.com/tutorials/terraform/install-cli)
+
+## Step-08: Install git-secrets
+- [Install git-secrets](https://github.com/awslabs/git-secrets)
+- Follow the steps in the link above to ensure that Access Key ID and SECRET Access Key are not pushed to git repositories

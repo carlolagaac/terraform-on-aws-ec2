@@ -31,6 +31,7 @@ module "vpc" {
 
   # VPC Basic Details
   name = "vpc-dev"
+  enable_ipv6 = "true" # Added IPv6 flag to test due to IPv4 exhaustion
   cidr = "10.0.0.0/16"   
   azs                 = ["ap-southeast-1a", "ap-southeast-1b"]
   private_subnets     = ["10.0.1.0/24", "10.0.2.0/24"]
@@ -64,9 +65,11 @@ module "vpc" {
     Type = "database-subnets"
   }
 
+# Added Project tag as its an enabled Cost Allocation Tag
   tags = {
-    Owner = "kalyan"
+    Owner = "carlo"
     Environment = "dev"
+    Project = "vpc-dev"
   }
 
   vpc_tags = {

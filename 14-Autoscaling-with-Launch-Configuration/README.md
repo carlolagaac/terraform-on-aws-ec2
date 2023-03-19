@@ -717,7 +717,7 @@ rm -rf terraform.tfstate*
 ```t
 $ terraform import aws_autoscaling_policy.test-policy asg-name/policy-name
 
-terraform import aws_autoscaling_policy.dkalyan-test-policy myapp1-asg-20210329045302504300000007/TP1
+terraform import aws_autoscaling_policy.dcarlo-test-policy myapp1-asg-20210329045302504300000007/TP1
 ```
 
 ## References

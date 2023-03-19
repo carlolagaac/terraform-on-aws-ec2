@@ -131,7 +131,7 @@ rm -rf terraform.tfstate*  # This step not needed as e are using remote state st
 
 ## Sample Output - During Remote State Storage Migration**
 ```t
-Kalyans-MacBook-Pro:project-1-networking kdaida$ terraform init
+carlos-MacBook-Pro:project-1-networking kdaida$ terraform init
 Initializing modules...
 
 Initializing the backend...
@@ -160,6 +160,6 @@ should now work.
 If you ever set or change modules or backend configuration for Terraform,
 rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
-Kalyans-MacBook-Pro:project-1-networking kdaida$ 
+carlos-MacBook-Pro:project-1-networking kdaida$ 
 
 ```
