@@ -1,6 +1,7 @@
 /ADDITIONAL-TOPICS
 FUTURE-TOPICS
 #.gitignore
+.gitignore.swp
 
 # macOS Files
 .DS_Store
