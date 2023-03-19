@@ -68,7 +68,7 @@ sudo curl http://169.254.169.254/latest/dynamic/instance-identity/document -o /v
 module "public_bastion_sg" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "3.18.0"
-
+  
   name        = "public-bastion-sg"
   description = "Security group with SSH port open for everybody (IPv4 CIDR), egress ports are all world open"
   vpc_id      = module.vpc.vpc_id
