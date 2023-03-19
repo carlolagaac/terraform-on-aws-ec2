@@ -15,5 +15,11 @@ variable "environment" {
 variable "business_division" {
   description = "Business Division in the large organization this Infrastructure belongs"
   type = string
-  default = "sap"
+  default = "SAP"
+}
+# Cost Allocation Tag - Project
+variable "Project" {
+  description = "Project Cost Allocation Tag"
+  type = string
+  default = "VPC-Dev"
 }

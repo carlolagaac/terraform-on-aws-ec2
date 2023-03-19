@@ -6,6 +6,12 @@ variable "vpc_name" {
   type = string 
   default = "myvpc"
 }
+# VPC enable IPv6 
+variable "vpc_enable_ipv6" {
+  description = "Enable IPv6"
+  type = bool
+  default ="true"
+}
 
 # VPC CIDR Block
 variable "vpc_cidr_block" {
