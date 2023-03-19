@@ -17,3 +17,9 @@ variable "business_division" {
   type = string
   default = "SAP"
 }
+# Cost Allocation Tag - Project
+variable "Project" {
+  description = "Project Cost Allocation Tag"
+  type = string
+  default = "VPC-Dev"
+}

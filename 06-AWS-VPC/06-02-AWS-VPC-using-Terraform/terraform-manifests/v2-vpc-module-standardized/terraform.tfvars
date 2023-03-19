@@ -1,6 +1,6 @@
 # Generic Variables
 aws_region = "ap-southeast-1"
-environment = "stag"
+environment = "stage"
 business_division = "HR"
 
 
