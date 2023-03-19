@@ -4,7 +4,7 @@
 variable "aws_region" {
   description = "Region in which AWS Resources to be created"
   type = string
-  default = "us-east-1"  
+  default = "ap-southeast-1"  
 }
 
 # Environment Variable
@@ -15,7 +15,7 @@ variable "environment" {
 }
 
 # Application Name
-variable "business_divsion" {
+variable "business_division" {
   description = "Business Division in the large organization this Infrastructure belongs"
   type = string
   default = "HR-Team"
@@ -37,7 +37,7 @@ variable "vpc_cidr_block" {
 variable "vpc_availability_zones" {
   description = "VPC Availability Zones"
   type = list(string)
-  default = ["us-east-1a", "us-east-1b", "us-east-1c"]
+  default = ["ap-southeast-1a", "ap-southeast-1b", "ap-southeast-1c"]
 }
 
 variable "vpc_public_subnets" {

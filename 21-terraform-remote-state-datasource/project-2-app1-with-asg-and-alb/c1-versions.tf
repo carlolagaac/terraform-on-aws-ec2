@@ -19,7 +19,7 @@ terraform {
   backend "s3" {
     bucket = "terraform-on-aws-for-ec2"
     key    = "dev/project2-app1/terraform.tfstate"
-    region = "us-east-1" 
+    region = "ap-southeast-1" 
 
     # Enable during Step-09     
     # For State Locking

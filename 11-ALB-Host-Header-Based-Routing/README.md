@@ -41,7 +41,7 @@ Error: Error requesting certificate: LimitExceededException: Error: you have rea
 ### Step-04-00: Update terraform.tfvars
 ```t
 # Before
-aws_region = "us-east-1"
+aws_region = "ap-southeast-1"
 
 # After
 aws_region = "us-east-2"
@@ -49,7 +49,7 @@ aws_region = "us-east-2"
 ### Step-04-01: Update vpc.auto.tfvars 
 ```t
 # Before
-vpc_availability_zones = ["us-east-1a", "us-east-1b"]
+vpc_availability_zones = ["ap-southeast-1a", "ap-southeast-1b"]
 
 # After
 vpc_availability_zones = ["us-east-2a", "us-east-2b"]

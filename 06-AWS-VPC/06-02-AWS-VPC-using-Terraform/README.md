@@ -32,7 +32,7 @@ module "vpc" {
   # VPC Basic Details
   name = "vpc-dev"
   cidr = "10.0.0.0/16"   
-  azs                 = ["us-east-1a", "us-east-1b"]
+  azs                 = ["ap-southeast-1a", "ap-southeast-1b"]
   private_subnets     = ["10.0.1.0/24", "10.0.2.0/24"]
   public_subnets      = ["10.0.101.0/24", "10.0.102.0/24"]
 
@@ -128,7 +128,7 @@ rm -rf terraform.tfstate*
 variable "aws_region" {
   description = "Region in which AWS Resources to be created"
   type = string
-  default = "us-east-1"  
+  default = "ap-southeast-1"  
 }
 # Environment Variable
 variable "environment" {
@@ -137,7 +137,7 @@ variable "environment" {
   default = "dev"
 }
 # Business Division
-variable "business_divsion" {
+variable "business_division" {
   description = "Business Division in the large organization this Infrastructure belongs"
   type = string
   default = "HR"
@@ -149,9 +149,9 @@ variable "business_divsion" {
 ```t
 # Define Local Values in Terraform
 locals {
-  owners = var.business_divsion
+  owners = var.business_division
   environment = var.environment
-  name = "${var.business_divsion}-${var.environment}"
+  name = "${var.business_division}-${var.environment}"
   common_tags = {
     owners = local.owners
     environment = local.environment     
@@ -181,7 +181,7 @@ variable "vpc_cidr_block" {
 variable "vpc_availability_zones" {
   description = "VPC Availability Zones"
   type = list(string)
-  default = ["us-east-1a", "us-east-1b"]
+  default = ["ap-southeast-1a", "ap-southeast-1b"]
 }
 
 # VPC Public Subnets
@@ -323,9 +323,9 @@ output "azs" {
 ## Step-10: terraform.tfvars
 ```t
 # Generic Variables
-aws_region = "us-east-1"  
+aws_region = "ap-southeast-1"  
 environment = "dev"
-business_divsion = "HR"
+business_division = "HR"
 ```
 
 ## Step-11: vpc.auto.tfvars
@@ -333,7 +333,7 @@ business_divsion = "HR"
 # VPC Variables
 vpc_name = "myvpc"
 vpc_cidr_block = "10.0.0.0/16"
-vpc_availability_zones = ["us-east-1a", "us-east-1b"]
+vpc_availability_zones = ["ap-southeast-1a", "ap-southeast-1b"]
 vpc_public_subnets = ["10.0.101.0/24", "10.0.102.0/24"]
 vpc_private_subnets = ["10.0.1.0/24", "10.0.2.0/24"]
 vpc_database_subnets= ["10.0.151.0/24", "10.0.152.0/24"]
